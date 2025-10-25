@@ -23,13 +23,14 @@ const Button = ({
   // Base classes
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors';
   
-  // Variant classes
+  // Variant classes - DevJourney Theme (Maroon & Green)
   const variantClasses = {
-    primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500',
-    secondary: 'bg-gray-200 hover:bg-gray-300 text-gray-800 focus:ring-gray-500',
+    primary: 'bg-red-900 hover:bg-red-800 text-white focus:ring-red-700', // Maroon primary
+    secondary: 'bg-gray-200 hover:bg-gray-300 text-gray-800 focus:ring-gray-500 dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white',
     danger: 'bg-red-600 hover:bg-red-700 text-white focus:ring-red-500',
-    success: 'bg-green-600 hover:bg-green-700 text-white focus:ring-green-500',
+    success: 'bg-green-700 hover:bg-green-600 text-white focus:ring-green-500', // Forest green
     warning: 'bg-yellow-500 hover:bg-yellow-600 text-white focus:ring-yellow-500',
+    accent: 'bg-green-800 hover:bg-green-700 text-white focus:ring-green-600', // New accent variant
   };
   
   // Size classes
@@ -58,7 +59,7 @@ const Button = ({
 };
 
 Button.propTypes = {
-  variant: PropTypes.oneOf(['primary', 'secondary', 'danger', 'success', 'warning']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'danger', 'success', 'warning', 'accent']),
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
